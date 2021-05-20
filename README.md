@@ -11,16 +11,16 @@
 другая кодировка и для правильного отображения надо будет открыть файл с кодировкой "koi-8". Просматривать записи из этого файла 
 можно с помощью такого кода Python:
 
-import pandas as pd
+import pandas as pd  
 
-n = 120
-df = pd.read_csv('rbc_Санкт-Петербург_10_09_2020-19_09_2020.csv', encoding = 'utf-8')
-print(df.iloc[n]['Time'])
-print(df.iloc[n]['Date'])
-print(df.iloc[n]['Header'])
-print(df.iloc[n]['Overview'])
-print(df.iloc[n]['Text'])
-
+n = 120  
+df = pd.read_csv('rbc_Санкт-Петербург_10_09_2020-19_09_2020.csv', encoding = 'utf-8')  
+print(df.iloc[n]['Time'])  
+print(df.iloc[n]['Date'])  
+print(df.iloc[n]['Header'])  
+print(df.iloc[n]['Overview'])  
+print(df.iloc[n]['Text'])  
+  
 Всего в этом файле 142 новости, поэтому n можно задавать от 0 до 141.
 
 Каждая новость, содержащаяся в результатах поиска на сайте РБК по заданному тегу в заданном промежутке времени (отображаются ссылки-заголовки и 
